@@ -76,3 +76,16 @@ int MyStrchr(const char* scr, char ch)
         return -1;
     }
 }
+
+char* MyStrcat(char* scr, char* dest)
+{
+    int lenn =  MyStrlen(scr);
+    size_t i = 0;
+    while (dest[i] != '\0')
+    {
+        scr[lenn + i] = dest[i];
+        i++;
+    }
+    return scr;
+}
+

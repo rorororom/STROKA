@@ -71,22 +71,30 @@ int main()
 //     }
 //
 //     return 0;
+//
+//     //--------------------------------------------------------
+//     char scr[len] = "";
+//     scanf("%s", scr);
+//     char ch;
+//     scanf(" %c", &ch);
+//     int answer = MyStrchr(scr, ch);
+//     if (answer == -1)
+//     {
+//         printf("character not found");
+//     }
+//     else
+//     {
+//         printf("%d\n", answer);
+//     }
 
     //--------------------------------------------------------
-    char scr[len] = "";
-    scanf("%s", scr);
-    char ch;
-    scanf(" %c", &ch);
-    int answer = MyStrchr(scr, ch);
-    if (answer == -1)
-    {
-        printf("character not found");
-    }
-    else
-    {
-        printf("%d\n", answer);
-    }
 
+    char scr[len] = "qwer";
+    scanf("%s", scr);
+    char dest[len] = "abc";
+    scanf("%s", dest);
+    printf("%s\n", MyStrcat(scr, dest));
+    
 }
 
 
