@@ -89,12 +89,15 @@ int main()
 
     //--------------------------------------------------------
 
-    char scr[len] = "qwer";
-    scanf("%s", scr);
-    char dest[len] = "abc";
-    scanf("%s", dest);
-    printf("%s\n", MyStrcat(scr, dest));
-    
+    // char scr[len] = "qwer";
+    // scanf("%s", scr);
+    // char dest[len] = "abc";
+    // scanf("%s", dest);
+    // printf("%s\n", MyStrcat(scr, dest));
+
+    //--------------------------------------------------------
+
+        
 }
 
 
