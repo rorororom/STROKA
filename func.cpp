@@ -42,22 +42,37 @@ int MyStrlen(char* scr)
     return i;
 }
 
-int MyStrcmp(char* scr, char* dest)
-{
-    int str1 = MyStrlen(scr);
-    int str2 = MyStrlen(dest);
-    if (str1 == str2)
-    {
-        return 0;
+int MyStrcmp(const char* scr, const char* dest) {
+    size_t i = 0;
+    while (scr[i] != '\0' && dest[i] != '\0') {
+        if (scr[i] != dest[i]) {
+            return scr[i] - dest[i];
+        }
+        ++i;
     }
-    return str1 - str2;
+    return scr[i] - dest[i];
 }
 
-int MyStrncmp(const char* str1, const char* str2, size_t len) {
-    for (size_t i = 0; i < len; ++i) {
-        if (str1[i] != str2[i] || str1[i] != str2[i]) {
-            return str1[i] - str2[i];
+
+int MyStrncmp(const char* scr, const char* dest, size_t len) {
+    size_t i;
+    for (i = 0; i < len; ++i) {
+        if (scr[i] != dest[i] || scr[i] != '\0') {
+            return scr[i] - dest[i];
         }
     }
     return 0;
+}
+
+int MyStrchr(const char* scr, char ch)
+{
+    size_t i = 0;
+    while (scr[i] != '\0' && scr[i] != ch) {
+        ++i;
+    }
+    if (scr[i] == ch) {
+        return i;
+    } else {
+        return -1;
+    }
 }
